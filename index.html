@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Proposal</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<table align="center">
+    <tr>
+        <td><a href="https://github.com/Rinaldyr/FinalYearProject">GitHub</a></td>
+        <td><a href="#">Proposal</a></td>
+        <td>Progress</td>
+    </tr>
+</table>
+<hr>
+<div align="center">
+    <h1>Final Year Project Proposal</h1>
+    <h3>Implementing a Functional Evolutionary Data Structure to Optimise Queries Processing</h3>
+    <h4>Rinaldy Ridwan, BSc Computer Science, University of Birmingham</h4>
+</div>
+<hr>
+<div class="content">
+    <h2>Introduction</h2>
+    <p>We propose the use of evolutionary algorithm to build a new data structure that aims to outperform classical data
+        structures. Ultimately, we are looking for a data structure that will adapt and fits itself into the needs of the problem.</p>
+
+    <h2>Explaining the Problem</h2>
+    <p>In this modern world, we are becoming more and more dependent on technology, and this results in the ever-evolving use of it. Hence we require more information to be stored and used in computers. Size of data steadily increase in size and complexity but unless we constantly purchase extra computational powers, our computers does not grow stronger. So larger data means more computation and hence longer wait. We want to figure out how to maximise the power of our computers to be able to handle large data efficiently.
+    </p>
+    <p>This is where evolutionary algorithm comes in. EXPLAIN EVOLUTIONARY ALGORITHM And ITS PURPOSE
+
+    </p>
+
+    <h2>Proposing a Solution</h2>
+    <p>We will be creating a binary tree with self-adapting abilities. This is the evolutionary algorithm. At each iteration, fitness will be calculated for each tree, and then some parts of the tree are to be rotated, or re-balanced to see if fitness will rise.</p>
+
+    <h2>Important Project Components</h2>
+    <p>In order to start this project, we will need to know the essential information. This includes
+        the chosen programming language for development, what sort of queries are to be focused on, and how to gather
+        results and perform comparisons.
+    </p>
+    <p>Functional programming is the focus area of this research, and the choice boils down to Haskell or OCaml. Haskell
+        has the advantage over its community, which follows that it has a larger volume of available libraries, some of
+        which may be better quality, and could even be difficult to replicate in OCaml. However, due to Haskell's
+        expensive lazy evaluation methodology, it will lose some speed when computing some functions, contrast to its
+        OCaml, the eager evaluating counterpart. We will go primarily with Haskell, because of its huge community
+        support. There could be many useful libraries that may be used right off the shelf, and that would save a lot of
+        time than implementing everything. If there is time though, I would like to try implementing the same algorithm
+        in OCaml as well to further my report on this project. Code writing is rather similar between the two languages
+        after all.
+    </p>
+    <p>Queries to be used may be of any kind. It could be to find a certain value using a key, or it could simply be inserting integers into the data structure. To start the project we would like to keep it simple and start by playing with integers. We would be generating a large population of randomly generated numbers. There will be a wide range of population sizes to be used for testing: starting from the small batch of 10, to 1,000 and then to a pool of 1,000,000 entries. This is to analyse the performance of the new data structure with small and large data size.
+    </p>
+    <p>Haskell and OCaml both provides standard libraries to time computations. They are System that has CPUTime() function and Sys that contains time() function respectively. These functions compute the run time of the program. There will be multiple test runs and each run will have a specified population size that will be fed into both the evolutionary data structure and the classical data structure. We will perform about 5 or 10 repetitions for each size and then average the result. This average will be the performance of each data structure for a certain popoulation size. Performances will be recorded and stored in a table for presentation clarity.
+    </p>
+
+    <h2>Timeline</h2>
+
+    <h2>References</h2>
+
+</div>
+
+</body>
+</html>

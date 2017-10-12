@@ -1,0 +1,61 @@
+body {
+    font-family: "Century Gothic", serif;
+}
+
+.content {
+    margin: 50px;
+}
+
+.content > h2 {
+    text-align: center;
+}
+
+h1 {
+    color: #2e4566;
+}
+
+h2 {
+    text-decoration: underline;
+    color: #2f5496;
+}
+
+h3 {
+    color: #5b9bd5;
+}
+
+h4 {
+    font-weight: normal;
+    color: #70c4f5;
+}
+
+hr {
+    border-color: #59a7ea;
+}
+
+ul > li {
+    display: inline-block;
+    margin: 5px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: #c1fffd;
+}
+
+table tr:nth-child(odd) {
+    /*background-color: #dcfffd;*/
+}
+
+table th {
+    background-color: #3460a9;
+    color: ghostwhite;
+    font-weight: bold;
+}
+
+table, tr, th, td {
+    /*border: 1px solid #000000;
+    border-collapse: collapse;*/
+}
