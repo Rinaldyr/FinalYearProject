@@ -16,48 +16,40 @@
 <hr>
 <div align="center">
     <h1>Final Year Project Proposal</h1>
-    <h3>Implementing a Functional Evolutionary Data Structure to Optimise Queries Processing</h3>
-    <h4>Rinaldy Ridwan, BSc Computer Science, University of Birmingham</h4>
+    <h2 style="text-decoration: none">Implementing a Functional Evolutionary Data Structure to Optimise Queries Processing</h2>
+    <h3>Rinaldy Ridwan, BSc Computer Science, University of Birmingham</h3>
+    <h4>Supervisor <a href="http://www.cs.bham.ac.uk/~lehrepk/">Dr. Per Kristian Lehre</a></h4>
 </div>
 <hr>
 <div class="content">
     <h2>Introduction</h2>
-    <p>We propose the use of evolutionary algorithm to build a new data structure that aims to outperform classical data
-        structures. Ultimately, we are looking for a data structure that will adapt and fits itself into the needs of the problem.</p>
-
-    <h2>Explaining the Problem</h2>
-    <p>In this modern world, we are becoming more and more dependent on technology, and this results in the ever-evolving use of it. Hence we require more information to be stored and used in computers. Size of data steadily increase in size and complexity but unless we constantly purchase extra computational powers, our computers does not grow stronger. So larger data means more computation and hence longer wait. We want to figure out how to maximise the power of our computers to be able to handle large data efficiently.
-    </p>
-    <p>This is where evolutionary algorithm comes in. EXPLAIN EVOLUTIONARY ALGORITHM And ITS PURPOSE
-
-    </p>
+    <p>The evolutionary algorithm has been a growing interest, and its use diverse over the past few decades. It is predominantly used for optimising solutions for numerous real-world problems that includes search, pathfinding, and decision making. However, few theoretical results exist that compares its effectiveness against classical data structures. If it turns out evolutionary data structures outperforms others, then queries would be solved faster, thus saving the most critical attribute in almost every kind of service – time.</p>
+    <p>The study of the field has suggested many different variants of evolutionary algorithms. The underlying idea is, however, the same: the ‘survival of the fittest’ amongst a population of individuals in a controlled environment, which causes the fitness of the population. There will be a function to determine the quality of an individual in which they will be given an abstract measure of their fitness. Better candidates will have higher fitness score. These candidates are then chosen for recombination and/or mutation, which then produces an offspring generation. Every offspring will compete with the older generations for a place in the next one. This process is repeated until a termination condition is satisfied.</p>
+    <p>This project intends to identify how well an evolutionary data structure processes queries.</p>
 
     <h2>Proposing a Solution</h2>
-    <p>We will be creating a binary tree with self-adapting abilities. This is the evolutionary algorithm. At each iteration, fitness will be calculated for each tree, and then some parts of the tree are to be rotated, or re-balanced to see if fitness will rise.</p>
+    <p>We propose the use of evolutionary algorithm to build a new data structure that aims to outperform classical data structures for query purposes. This data structure that will adapt and fit itself into the needs of the problem so that queries will get its desired results returned in the fastest time possible.</p>
+    <p>We will be creating a binary tree integrated with self-adapting abilities using evolutionary algorithm. To start, we will initialise three main sample integer test data (1 to n with no duplicates), each having a different kind of distribution – unimodal, uniform and random. This will be fed into the tree. We will then call our fitness function to evaluate the tree’s initial fitness score. After that, we will repeat the following until a termination condition is satisfied:</p>
+    <ol>
+        <li>Select a new population based on the fitness of previous trees,</li>
+        <li>Mutate the resulting offspring, (some parts of the tree are to be rotated, or re-balanced)</li>
+        <li>Evaluate new candidates to see if fitness will rise,</li>
+        <li>Select individuals for the next generation </li>
+    </ol>
+    <p>This evolutionary tree will be compared against classical data structures which includes the Red Black Tree, Splay Tree, AVL Tree and so on.</p>
 
     <h2>Important Project Components</h2>
-    <p>In order to start this project, we will need to know the essential information. This includes
-        the chosen programming language for development, what sort of queries are to be focused on, and how to gather
-        results and perform comparisons.
-    </p>
-    <p>Functional programming is the focus area of this research, and the choice boils down to Haskell or OCaml. Haskell
-        has the advantage over its community, which follows that it has a larger volume of available libraries, some of
-        which may be better quality, and could even be difficult to replicate in OCaml. However, due to Haskell's
-        expensive lazy evaluation methodology, it will lose some speed when computing some functions, contrast to its
-        OCaml, the eager evaluating counterpart. We will go primarily with Haskell, because of its huge community
-        support. There could be many useful libraries that may be used right off the shelf, and that would save a lot of
-        time than implementing everything. If there is time though, I would like to try implementing the same algorithm
-        in OCaml as well to further my report on this project. Code writing is rather similar between the two languages
-        after all.
-    </p>
-    <p>Queries to be used may be of any kind. It could be to find a certain value using a key, or it could simply be inserting integers into the data structure. To start the project we would like to keep it simple and start by playing with integers. We would be generating a large population of randomly generated numbers. There will be a wide range of population sizes to be used for testing: starting from the small batch of 10, to 1,000 and then to a pool of 1,000,000 entries. This is to analyse the performance of the new data structure with small and large data size.
-    </p>
-    <p>Haskell and OCaml both provides standard libraries to time computations. They are System that has CPUTime() function and Sys that contains time() function respectively. These functions compute the run time of the program. There will be multiple test runs and each run will have a specified population size that will be fed into both the evolutionary data structure and the classical data structure. We will perform about 5 or 10 repetitions for each size and then average the result. This average will be the performance of each data structure for a certain popoulation size. Performances will be recorded and stored in a table for presentation clarity.
-    </p>
+    <p>To start this project, we will need to know some essential information. The sections below describe the development, testing, and analyses environments.</p>
+    <h4>Programming Language</h4>
+    <p>Functional programming is the focus area of this research. Between Haskell and OCaml, the former has the advantage over its community, which follows that it has a larger volume of available libraries, some of which may be better quality, and could even be difficult to replicate in the latter. However, due to Haskell's expensive lazy evaluation methodology, it will lose some speed when computing some functions, contrast to OCaml, its eager evaluating counterpart. We will go primarily with Haskell, because of its huge community support. There could be many useful libraries that may be used right off the bat, hence saving a lot of time and eliminating potential bugs than to implement all functions. If there is time though, we will try implementing the same algorithm in OCaml as well to further the report on this project. Code writing is rather similar between the two languages after all.</p>
+    <p>Haskell and OCaml both provides standard libraries to time computations. They are System that has CPUTime() function and Sys that contains time() function respectively. These functions compute the run time of the program.</p>
+    <h4>Testing and Analysis</h4>
+    <p>There will be multiple tests and each test will have many rounds. Each round will have a specified input size that will be fed into both the evolutionary and the classical data structure. There will be around 5 to 10 rounds per test for each data structure, then the average time will be computed. This will be the performance of each data structure for that input.</p>
+    <p>The program will yield a CSV log file containing the performance of the test. Results will then be fed into the statistical programming language R which transforms it into presentable graphics for analysis and comparison.</p>
+    <p>In theory, this data structure could be used by almost all kind of queries given that it is comparable. To start the project, we would like to keep it simple and use distinct integers as our inputs. We would be generating a large group of numbers to be used for testing – maybe starting from the small batch of 10, to 1,000 and then to a pool of 1,000,000 entries. But ultimately, we are most interested in the structure of the tree.</p>
 
     <h2>Timeline</h2>
-
-    <h2>References</h2>
+    <img src="timeline.png"/>
 
 </div>
 
